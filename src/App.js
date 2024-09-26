@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <section class="container">
+        <h2 class="title">Contact Us</h2>
+        <div class="names">
+          <div class="first">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" />
+          </div>
+          <div class="last">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" />
+          </div>
+        </div>
+        <label for="mail">Email Address</label>
+        <input type="email" id="mail" />
+        <label for="">Query Type</label>
+        <div class="q-type">
+          <div class="gen">
+            <input type="radio" id="" />
+            <label for="">General Enquiry</label>
+          </div>
+          <div class="req">
+            <input type="radio" id="" />
+            <label for="">Support Request</label>
+          </div>
+        </div>
+        <div>
+          <label for="message" class="message">
+            Message
+          </label>
+          <textarea id="message"></textarea>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="check" />
+          <label for="check">I consent to being contacted by the team</label>
+        </div>
+
+        <button class="btn">Submit</button>
+      </section>
     </div>
   );
-}
+};
 
 export default App;
